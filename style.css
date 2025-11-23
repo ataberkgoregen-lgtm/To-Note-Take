@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.ata {
+    min-height:100vh; /* viewport yüksekliğinin tamamı */
+    display:flex;
+    align-items:center; /* dikey ortala */
+    justify-content:center;
+}
+
+.card-body {
+    text-align: center;
+}
+
+.shopping-list li {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background-color: antiquewhite;
+}
+
+.shopping-list li .item-name {
+    flex: 1;
+}
+
+.shopping-list li .delete-icon {
+    transform: scale(0);
+    transition: transfrom 200ms;
+    font-size: 30px !important;
+}
+
+.shopping-list li:hover .delete-icon {
+    transform: scale(1);
+    transition: 400ms;
+}
+
+.shopping-list li[item-completed] .item-name {
+    text-decoration: line-through;
+    color: #999;
+}
